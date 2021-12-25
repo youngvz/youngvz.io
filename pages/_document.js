@@ -21,7 +21,7 @@ class MyDocument extends Document {
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet"/>
 
-        <meta name="title" content="ng-youngvz"/>
+        <meta name="title" content="youngvz"/>
         <meta name="description" content="Vaporwave inspired website."/>
 
         {/* <!-- Open Graph / Facebook --> */}
