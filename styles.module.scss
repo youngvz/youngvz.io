@@ -105,6 +105,27 @@ $xl-desktop-maximum-width: 4200px;
     margin: 0 auto !important; 
     float: none !important; 
 
+    .audio {
+        position: fixed;
+        bottom:0;
+        margin: 8px;
+        width: calc(100% - 16px);
+        z-index: 99999;
+        filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+
+        @include phone-screen() {
+            top: 0;
+            width: calc(100% - 12px) !important;
+            margin: 6px;
+            bottom: unset !important;
+        }
+
+        &::-webkit-media-controls-enclosure {
+            // border-radius: 5px;
+            background-color: white;
+        }
+    }
+
     .landingWrapper {
         height: 50vh;
         width: 100%;

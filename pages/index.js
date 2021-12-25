@@ -1,36 +1,37 @@
 import styles from '../styles.module.scss'
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
+import { useState } from 'react';
 
 export default function Home() {
-
-  const playAudio = () => {
+  const [isHidden, setIsHidden] = useState(true)
+  const [text, setText] = useState('Lift off 🚀')
+  
+  const toggleAudio = () => {
     var audio = document.getElementById('a1');
 
-    audio.addEventListener('ended', function() {
-        currentTime = 0;
-        audio.play();
-    }, false);
-
     if (audio.duration > 0 && !audio.paused){
+        setText('Lift off 🚀')
+        setIsHidden(true)
         audio.pause();
       } else {
+        setText('🌊 Relax')
+        setIsHidden(false)
+        setTimeout(()=> {
+            setIsHidden(true)
+        }, 3800);
         audio.play();
       }
-
   }
 
   return (
     <div class={styles.pageWrapper}>
-    <audio id='a1' src='/static/assets/audio/HOME - Resonance.mp3'></audio>
+    <audio hidden={isHidden} class={styles.audio} controls loop id='a1' src='/static/assets/audio/HOME - Resonance.mp3'></audio>
     <section class={styles.sakuraBg}></section>
     <div class={styles.landingWrapper}>
         <div class={styles.layerWrapper}>
             <p class={styles.title}>【𝕧𝕚𝕣𝕒𝕛 𝕤𝕙𝕒𝕙】</p>
             <img class={styles.roman} src="/static/assets/images/roman.png"/>
             <p class={styles.subtitle}>ヴェイパーウェイヴ</p>
-            <button class={styles.learnMore} onClick={playAudio}>Lift off 🚀</button>
+            <button class={styles.learnMore} onClick={toggleAudio}>{text}</button>
         </div>
     </div>
 
@@ -51,7 +52,9 @@ export default function Home() {
         </div>
         <div class={styles.description}>
             <p class={styles.title}>Welcome to my playground. <br/>🌊🌊🌊</p>
-            <p class={styles.subtitle}>Explore the inner workings of my mind where I muse about everything related to code, Chelsea FC, cats, music, gaming, anime, memes & whatever else I am currently obsessing over.</p>
+            <p class={styles.subtitle}>Enjoy curated samples of my code, art, and ramblings.</p>
+            <p class={styles.subtitle}>This website serves to host ideas and expressions I believe worth reinforcing. The design was inspired by Vaporwave, an Internet cultural, social, and aesthetic medium. </p>
+
         </div>
         <div class={styles.spaceCatWrapper}>
             <img class={styles.spaceCat} src="/static/assets/gifs/party-cat.gif"/>
@@ -146,7 +149,7 @@ export default function Home() {
     </div> 
 
     <div class={styles.footerWrapper}>
-        <a href="https://github1s.com/youngvz/ng-youngvz" target="_blank" rel="noopener noreferrer"><p>Made with Angular 💜</p></a>
+        <a href="https://github1s.com/youngvz/next-youngvz" target="_blank" rel="noopener noreferrer"><p>Made with NextJs 💜</p></a>
     </div>
 </div>
   )
