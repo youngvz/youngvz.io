@@ -40,7 +40,7 @@ export default function Home() {
             <a href="https://github.com/youngvz" target="_blank" rel="noopener noreferrer">
                 <img class="logo" src="/static/assets/icons/github_logo.png"/>
             </a>
-            <a href="https://medium.com/@youngvz" target="_blank" rel="noopener noreferrer">
+            <a href="https://youngvz.medium.com/" target="_blank" rel="noopener noreferrer">
                 <img class="logo" src="/static/assets/icons/medium_logo.png"/>
             </a>
             <a href="https://linkedin.com/in/virajashah/" target="_blank" rel="noopener noreferrer">
@@ -53,7 +53,7 @@ export default function Home() {
         <div class={styles.description}>
             <p class={styles.title}>Welcome to my playground. <br/>🌊🌊🌊</p>
             <p class={styles.subtitle}>Enjoy curated samples of my code, art, and ramblings.</p>
-            <p class={styles.subtitle}>This website serves to host ideas and expressions I believe worth reinforcing. The design was inspired by Vaporwave, an Internet cultural, social, and aesthetic medium. </p>
+            <p class={styles.subtitle}>The purpose of this website is to share my ideas and expressions. The design was inspired by Vaporwave, an Internet cultural, social, and aesthetic medium. </p>
 
         </div>
         <div class={styles.spaceCatWrapper}>
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
 
         <div class={styles.postWrapper}>
-            <a href="https://medium.com/@youngvz/an-intro-to-serverless-architecture-c0e356fbfd20" target="_blank" rel="noopener noreferrer">
+            <a href="https://youngvz.medium.com/an-intro-to-serverless-architecture-c0e356fbfd20" target="_blank" rel="noopener noreferrer">
                 <div class={styles.post}>
                     <img class={styles.thumbnail} src="/static/assets/images/serverless_thumbnail.jpeg"/>
                     <div class={styles.textContainer}>
@@ -101,7 +101,7 @@ export default function Home() {
                 </div>
             </a>
 
-            <a href="https://medium.com/@youngvz/top-3-things-to-know-before-building-an-app-in-2018-9df85e4fe26b" target="_blank" rel="noopener noreferrer">
+            <a href="https://youngvz.medium.com/top-3-things-to-know-before-building-an-app-in-2018-9df85e4fe26b" target="_blank" rel="noopener noreferrer">
                 <div class={styles.post}>
                     <img class={styles.thumbnail} src="/static/assets/images/mobile_dev_thumbail.jpeg"/>
                     <div class={styles.textContainer}>
