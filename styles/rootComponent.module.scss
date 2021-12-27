@@ -1,8 +1,6 @@
 @import '~compass-mixins/lib/compass/css3';
 @import url(//fonts.googleapis.com/css?family=Vibur);
 
-// height and width
-$max-screen-width: 2160px;
 
 $vapor_wave_violet: #7400b8;
 $vapor_wave_purple: #5e60ce;
@@ -30,73 +28,55 @@ $desktop-maximum-width: 2500px;
 $xl-desktop-minimum-width: 2500px;
 $xl-desktop-maximum-width: 4200px;
 
-@mixin row-flex-box-centered {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin column-flex-box-centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin top-navbar-and-content {
-  width: calc(100% - 350px);
-  height: 100%;
-}
-
+  
 @mixin phone-screen {
-  @media (min-width: #{$phone-minimum-width}) and (max-width: #{$phone-maximum-width - 1px}) { 
-    @content; 
-  }
-}
-
-@mixin tablet-screen {
-  @media (min-width: #{$tablet-minimum-width}) and (max-width: #{$tablet-maximum-width - 1px}) {
-    @content; 
-  }
-}
-
-@mixin laptop-screen {
-  @media (min-width: #{$laptop-minimum-width}) and (max-width: #{$laptop-maximum-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop-screen {
-  @media (min-width: #{$desktop-minimum-width}) and (max-width: #{$desktop-maximum-width - 1px}) { 
-    @content; 
-  }
-}
-
-@mixin xl-desktop-screen {
-  @media (min-width: #{$xl-desktop-minimum-width}) and (max-width: #{$xl-desktop-maximum-width - 1px}) { 
-    @content; 
-  }
-}
-
-
-// https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p#safari
-
-@mixin safari {
-  /* Safari 11+ */
-  @media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    @media (min-width: #{$phone-minimum-width}) and (max-width: #{$phone-maximum-width - 1px}) { 
       @content; 
     }
-  }
-
-  /* Safari 10.1 */
-  @media not all and (min-resolution:.001dpcm){ 
-    @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+}
+  
+@mixin tablet-screen {
+    @media (min-width: #{$tablet-minimum-width}) and (max-width: #{$tablet-maximum-width - 1px}) {
+      @content; 
+    }
+}
+  
+@mixin laptop-screen {
+    @media (min-width: #{$laptop-minimum-width}) and (max-width: #{$laptop-maximum-width - 1px}) {
       @content;
     }
-  }
 }
+  
+@mixin desktop-screen {
+    @media (min-width: #{$desktop-minimum-width}) and (max-width: #{$desktop-maximum-width - 1px}) { 
+      @content; 
+    }
+}
+  
+@mixin xl-desktop-screen {
+    @media (min-width: #{$xl-desktop-minimum-width}) and (max-width: #{$xl-desktop-maximum-width - 1px}) { 
+      @content; 
+    }
+}  
+  
+// https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p#safari
+  
+@mixin safari {
+    /* Safari 11+ */
+    @media not all and (min-resolution:.001dpcm) { 
+      @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        @content; 
+      }
+    }
+  
+    /* Safari 10.1 */
+    @media not all and (min-resolution:.001dpcm){ 
+      @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+        @content;
+      }
+    }
+}
+
 
 .pageWrapper {
     height: 100%;
@@ -113,7 +93,7 @@ $xl-desktop-maximum-width: 4200px;
         z-index: 99999;
         filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
 
-        @include phone-screen() {
+        @include phone-screen {
             top: 0;
             width: calc(100% - 12px) !important;
             margin: 6px;
@@ -373,8 +353,7 @@ $xl-desktop-maximum-width: 4200px;
             }
         }
     }
-
-
+    
     .checkerboardWrapper {
         width: 100%;
         height: 100px;
