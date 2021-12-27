@@ -1,0 +1,88 @@
+
+// phone screen range
+$phone-minimum-width: 1px;
+$phone-maximum-width: 600px;
+
+// tablet screen range
+$tablet-minimum-width: 600px;
+$tablet-maximum-width: 1024px;
+
+// laptop screen range
+$laptop-minimum-width: 1024px;
+$laptop-maximum-width: 1440px;
+
+// desktop screen range
+$desktop-minimum-width: 1440px;
+$desktop-maximum-width: 2500px;
+
+// large desktop screen range
+$xl-desktop-minimum-width: 2500px;
+$xl-desktop-maximum-width: 4200px;
+
+@mixin row-flex-box-centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin column-flex-box-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin top-navbar-and-content {
+    width: calc(100% - 350px);
+    height: 100%;
+  }
+  
+  @mixin phone-screen {
+    @media (min-width: #{var(--phone-minimum-width)}) and (max-width: #{var(--phone-maximum-width) - 1px}) { 
+      @content; 
+    }
+  }
+  
+  @mixin tablet-screen {
+    @media (min-width: #{var(--tablet-minimum-width)}) and (max-width: #{var(--tablet-maximum-width) - 1px}) {
+      @content; 
+    }
+  }
+  
+  @mixin laptop-screen {
+    @media (min-width: #{var(--laptop-minimum-width)}) and (max-width: #{var(--laptop-maximum-width) - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop-screen {
+    @media (min-width: #{var(--desktop-minimum-width)}) and (max-width: #{var(--desktop-maximum-width) - 1px}) { 
+      @content; 
+    }
+  }
+  
+  @mixin xl-desktop-screen {
+    @media (min-width: #{var(--xl-desktop-minimum-width)}) and (max-width: #{var(--xl-desktop-maximum-width) - 1px}) { 
+      @content; 
+    }
+  }
+  
+  
+  // https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p#safari
+  
+  @mixin safari {
+    /* Safari 11+ */
+    @media not all and (min-resolution:.001dpcm) { 
+      @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        @content; 
+      }
+    }
+  
+    /* Safari 10.1 */
+    @media not all and (min-resolution:.001dpcm){ 
+      @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+        @content;
+      }
+    }
+  }
