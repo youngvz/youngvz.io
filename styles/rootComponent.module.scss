@@ -1,102 +1,12 @@
 @import '~compass-mixins/lib/compass/css3';
 @import url(//fonts.googleapis.com/css?family=Vibur);
-
-// height and width
-$max-screen-width: 2160px;
+@import "mixins";
 
 $vapor_wave_violet: #7400b8;
 $vapor_wave_purple: #5e60ce;
 $vapor_wave_pink: #FF71CE;
 $vapor_wave_turqouise: #56cfe1;
 $vapor_wave_cyan: #80ffdb;
-
-// phone screen range
-$phone-minimum-width: 1px;
-$phone-maximum-width: 600px;
-
-// tablet screen range
-$tablet-minimum-width: 600px;
-$tablet-maximum-width: 1024px;
-
-// laptop screen range
-$laptop-minimum-width: 1024px;
-$laptop-maximum-width: 1440px;
-
-// desktop screen range
-$desktop-minimum-width: 1440px;
-$desktop-maximum-width: 2500px;
-
-// large desktop screen range
-$xl-desktop-minimum-width: 2500px;
-$xl-desktop-maximum-width: 4200px;
-
-@mixin row-flex-box-centered {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin column-flex-box-centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin top-navbar-and-content {
-  width: calc(100% - 350px);
-  height: 100%;
-}
-
-@mixin phone-screen {
-  @media (min-width: #{$phone-minimum-width}) and (max-width: #{$phone-maximum-width - 1px}) { 
-    @content; 
-  }
-}
-
-@mixin tablet-screen {
-  @media (min-width: #{$tablet-minimum-width}) and (max-width: #{$tablet-maximum-width - 1px}) {
-    @content; 
-  }
-}
-
-@mixin laptop-screen {
-  @media (min-width: #{$laptop-minimum-width}) and (max-width: #{$laptop-maximum-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop-screen {
-  @media (min-width: #{$desktop-minimum-width}) and (max-width: #{$desktop-maximum-width - 1px}) { 
-    @content; 
-  }
-}
-
-@mixin xl-desktop-screen {
-  @media (min-width: #{$xl-desktop-minimum-width}) and (max-width: #{$xl-desktop-maximum-width - 1px}) { 
-    @content; 
-  }
-}
-
-
-// https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p#safari
-
-@mixin safari {
-  /* Safari 11+ */
-  @media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
-      @content; 
-    }
-  }
-
-  /* Safari 10.1 */
-  @media not all and (min-resolution:.001dpcm){ 
-    @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
-      @content;
-    }
-  }
-}
 
 .pageWrapper {
     height: 100%;
@@ -871,7 +781,7 @@ $xl-desktop-maximum-width: 4200px;
     right: 0;
     bottom: 0;
     pointer-events: none;
-    background-image: url('./public/static/assets/icons/sakura-1-1.png'), url('./public/static/assets/icons/sakura-2.png');
+    background-image: url('../public/static/assets/icons/sakura-1-1.png'), url('../public/static/assets/icons/sakura-2.png');
      animation: snow 20s linear infinite;
  }
  
@@ -880,15 +790,3 @@ $xl-desktop-maximum-width: 4200px;
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
  }
- 
-//  @media (max-width: 768px) {
-//      .woocommerce ul.products li.product, 
-//      .woocommerce-page ul.products li.product, 
-//      .woocommerce-page[class*=columns-] ul.products li.product,
-//      .woocommerce[class*=columns-] ul.products li.product {
-//          width: 100%;
-//          float: left;
-//          clear: both;
-//          margin: 0 7em;
-//      }
-//  }

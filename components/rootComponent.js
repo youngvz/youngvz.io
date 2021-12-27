@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../styles/root.module.scss'
+import styles from '../styles/rootComponent.module.scss'
  
 export default function RootComponent(){
     const [isHidden, setIsHidden] = useState(true)
