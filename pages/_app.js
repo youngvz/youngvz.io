@@ -31,9 +31,8 @@ export default function MyApp({ Component, pageProps }) {
       <meta property="twitter:title" content="youngvz"/>
       <meta property="twitter:description" content="Vaporwave inspired website."/>
       <meta property="twitter:image" content="https://s3.amazonaws.com/www.youngvz.io/assets/images/link_preview.png"/>
-
-      </Head>
-      <Component {...pageProps} />
+    </Head>
+    <Component {...pageProps} />
     </>
   )
 }
