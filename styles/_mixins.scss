@@ -1,0 +1,69 @@
+
+// phone screen range
+$phone-minimum-width: 1px;
+$phone-maximum-width: 600px;
+
+// tablet screen range
+$tablet-minimum-width: 600px;
+$tablet-maximum-width: 1024px;
+
+// laptop screen range
+$laptop-minimum-width: 1024px;
+$laptop-maximum-width: 1440px;
+
+// desktop screen range
+$desktop-minimum-width: 1440px;
+$desktop-maximum-width: 2500px;
+
+// large desktop screen range
+$xl-desktop-minimum-width: 2500px;
+$xl-desktop-maximum-width: 4200px;
+
+  
+@mixin phone-screen {
+    @media (min-width: #{$phone-minimum-width}) and (max-width: #{$phone-maximum-width - 1px}) { 
+      @content; 
+    }
+}
+  
+@mixin tablet-screen {
+    @media (min-width: #{$tablet-minimum-width}) and (max-width: #{$tablet-maximum-width - 1px}) {
+      @content; 
+    }
+}
+  
+@mixin laptop-screen {
+    @media (min-width: #{$laptop-minimum-width}) and (max-width: #{$laptop-maximum-width - 1px}) {
+      @content;
+    }
+}
+  
+@mixin desktop-screen {
+    @media (min-width: #{$desktop-minimum-width}) and (max-width: #{$desktop-maximum-width - 1px}) { 
+      @content; 
+    }
+}
+  
+@mixin xl-desktop-screen {
+    @media (min-width: #{$xl-desktop-minimum-width}) and (max-width: #{$xl-desktop-maximum-width - 1px}) { 
+      @content; 
+    }
+}  
+  
+// https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p#safari
+  
+@mixin safari {
+    /* Safari 11+ */
+    @media not all and (min-resolution:.001dpcm) { 
+      @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        @content; 
+      }
+    }
+  
+    /* Safari 10.1 */
+    @media not all and (min-resolution:.001dpcm){ 
+      @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+        @content;
+      }
+    }
+}
