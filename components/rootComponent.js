@@ -52,8 +52,8 @@ export default function RootComponent(){
                 </div>
                 <div class={styles.description}>
                     <p class={styles.title}>Welcome to my playground. <br/>🌊🌊🌊</p>
-                    <p class={styles.subtitle}>Enjoy curated samples of my code, art, and ramblings.</p>
-                    <p class={styles.subtitle}>The purpose of this website is to share my ideas and expressions. The design was inspired by Vaporwave, an Internet cultural, social, and aesthetic medium. </p>
+                    <p class={styles.subtitle}>Enjoy curated samples of my code, art, and thoughts.</p>
+                    <p class={styles.subtitle}>The purpose of this website is to share my ideas and reflections. The design was inspired by Vaporwave, an Internet cultural, social, and aesthetic medium. </p>
 
                 </div>
                 <div class={styles.spaceCatWrapper}>
