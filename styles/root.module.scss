@@ -871,7 +871,7 @@ $xl-desktop-maximum-width: 4200px;
     right: 0;
     bottom: 0;
     pointer-events: none;
-    background-image: url('./public/static/assets/icons/sakura-1-1.png'), url('./public/static/assets/icons/sakura-2.png');
+    background-image: url('../public/static/assets/icons/sakura-1-1.png'), url('../public/static/assets/icons/sakura-2.png');
      animation: snow 20s linear infinite;
  }
  
@@ -880,15 +880,3 @@ $xl-desktop-maximum-width: 4200px;
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
  }
- 
-//  @media (max-width: 768px) {
-//      .woocommerce ul.products li.product, 
-//      .woocommerce-page ul.products li.product, 
-//      .woocommerce-page[class*=columns-] ul.products li.product,
-//      .woocommerce[class*=columns-] ul.products li.product {
-//          width: 100%;
-//          float: left;
-//          clear: both;
-//          margin: 0 7em;
-//      }
-//  }
