@@ -8,7 +8,7 @@ import Posts from '../components/Posts';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
-import styles from '../styles/Code.module.scss'
+import styles from '../styles/code.module.scss'
 
 export default function Code(){
     const [isHidden, setIsHidden] = useState(false)
