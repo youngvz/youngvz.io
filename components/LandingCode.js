@@ -26,7 +26,7 @@ export default function LandingCode(){
             startMatrix();
             setTimeout(()=> {
                 setIsHidden(true)
-            }, 5000);
+            }, 6500);
         }
     }, []);
 
