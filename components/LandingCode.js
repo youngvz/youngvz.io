@@ -35,6 +35,9 @@ export default function LandingCode(){
         var canvas = document.querySelector('canvas'),
         ctx = canvas.getContext('2d');
 
+        var audio = document.getElementById('matrix');
+        audio.play();
+
         // Setting the width and height of the canvas
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -76,6 +79,7 @@ export default function LandingCode(){
 
     return (
         <div className={styles.landingCodeWrapper}>
+            <audio hidden={true} id='matrix' src='/static/assets/audio/matrix.mp3'></audio>
             {canvas}
             <div className={styles.landingWrapper}>
                 <div className={styles.layerWrapper}>
