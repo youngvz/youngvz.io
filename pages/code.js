@@ -78,15 +78,15 @@ export default function Code(){
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://youngvz.io/code"/>
         <meta property="og:title" content="Code" key="title"/>
-        <meta property="og:description" content="Code by youngvz."/>
-        <meta property="og:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg"/>
+        <meta property="og:description" content="Code by youngvz." key="description"/>
+        <meta property="og:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg" key="og:image"/>
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://youngvz.io/code"/>
-        <meta property="twitter:title" content="Code"/>
-        <meta property="twitter:description" content="Code by youngvz."/>
-        <meta property="twitter:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg"/>
+        <meta property="twitter:title" content="Code" key="twitter:title"/>
+        <meta property="twitter:description" content="Code by youngvz." key="twitter:description"/>
+        <meta property="twitter:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg" key="og:image"/>
     </Head>;
 
     const canvas = isHidden ? null : <canvas></canvas>
