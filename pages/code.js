@@ -72,21 +72,21 @@ export default function Code(){
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>"/>
 
         <meta name="title" content="Code" key="title"/>
-        <meta name="description" content="Code by youngvz"key="title" />
+        <meta name="description" content="Code by youngvz" key="description"/>
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://youngvz.io/code"/>
-        <meta property="og:title" content="Code" key="title"/>
-        <meta property="og:description" content="Code by youngvz." key="description"/>
+        <meta property="og:url" content="https://youngvz.io/code" key="og:url"/>
+        <meta property="og:title" content="Code" key="og:title"/>
+        <meta property="og:description" content="Code by youngvz." key="og:description"/>
         <meta property="og:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg" key="og:image"/>
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://youngvz.io/code"/>
+        <meta property="twitter:url" content="https://youngvz.io/code" key="twitter:url"/>
         <meta property="twitter:title" content="Code" key="twitter:title"/>
         <meta property="twitter:description" content="Code by youngvz." key="twitter:description"/>
-        <meta property="twitter:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg" key="og:image"/>
+        <meta property="twitter:image" content="https://youngvz.io/static/assets/images/matrix_bg.jpg" key="twitter:image"/>
     </Head>;
 
     const canvas = isHidden ? null : <canvas></canvas>
