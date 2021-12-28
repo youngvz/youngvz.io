@@ -1,0 +1,57 @@
+@import "mixins";
+
+$vapor_wave_violet: #7400b8;
+$vapor_wave_purple: #5e60ce;
+$vapor_wave_pink: #FF71CE;
+$vapor_wave_turqouise: #56cfe1;
+$vapor_wave_cyan: #80ffdb;
+
+.connectWrapper {
+    padding: 24px 0;
+    background-color: $vapor_wave_pink;
+    background-image: linear-gradient( 140deg , $vapor_wave_pink 0%,  $vapor_wave_purple 80%);
+
+    .description {
+        margin: 0 10%;
+        font-family: 'Roboto', monospace;
+        font-weight: 600;
+
+        @include laptop-screen {
+            margin: 0 12.5%;
+        } 
+        
+        @include desktop-screen {
+            margin: 0 15%;
+        }
+        
+        @include xl-desktop-screen {
+            margin: 0 20%;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 2.5rem;
+
+            @include phone-screen {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 800;
+
+            @include phone-screen {
+                font-size: 1.2rem;
+            }
+        }
+
+        .emailLink {
+            color: white;
+            text-decoration: none;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8rem;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.footerWrapper {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: black;
+
+    a {
+        text-decoration: none;
+        p {
+            margin: 0;
+            color: white;
+            font-family: 'Roboto Mono',  monospace;
+        }
+    }
+}

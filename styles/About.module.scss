@@ -1,0 +1,138 @@
+
+@import "mixins";
+
+$vapor_wave_violet: #7400b8;
+$vapor_wave_purple: #5e60ce;
+$vapor_wave_pink: #FF71CE;
+$vapor_wave_turqouise: #56cfe1;
+$vapor_wave_cyan: #80ffdb;
+
+.aboutWrapper {
+    background-color: $vapor_wave_cyan;
+    background-image: linear-gradient( 140deg , $vapor_wave_cyan 0%, $vapor_wave_turqouise 70%);
+
+    .buttonWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .learnMore {
+            font-family: 'Roboto', monospace;
+            color: white;
+            background-image: linear-gradient( 140deg , $vapor_wave_violet 0%, $vapor_wave_purple 50%);
+            font-size: 1.2rem;
+            outline: none;
+            border: 0;
+            border-radius: 12px;
+            width: 200px;
+            height: 42px;
+            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+            
+
+            @include phone-screen {
+                font-size: 1.2rem;
+                height: 36px;
+                width: 160px;
+            }
+
+            @include tablet-screen {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .spaceCatWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .spaceCat {
+            margin: 0 10%;
+            height: 200px;
+           
+            @include phone-screen {
+                height: 150px;
+            }
+
+            @include tablet-screen {
+                font-size: 250px;
+            }
+
+            @include laptop-screen {
+                margin: 0 12.5%;
+            } 
+            
+            @include desktop-screen {
+                margin: 0 15%;
+            }
+            
+            @include xl-desktop-screen {
+                margin: 0 20%;
+            }
+        }
+    }
+
+    .linkWrapper {
+        border-top: 4px solid white;
+        background-color: #FF71CE;
+
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include phone-screen {
+            height: 60px;
+        }
+
+        img {
+            height: 48px;
+            width: 48px;
+
+            @include phone-screen {
+                height: 32px;
+                width: 32px;
+            }
+        }
+    }
+    
+
+    .description {
+        margin: 0 10%;
+        font-family: 'Roboto', monospace;
+        font-weight: 600;
+
+        @include laptop-screen {
+            margin: 0 12.5%;
+        } 
+        
+        @include desktop-screen {
+            margin: 0 15%;
+        }
+        
+        @include xl-desktop-screen {
+            margin: 0 20%;
+        }
+
+        .title {
+            font-size: 2.5rem;
+
+            @include phone-screen {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 800;
+
+            @include phone-screen {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+    

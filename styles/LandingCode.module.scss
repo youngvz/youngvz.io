@@ -1,0 +1,271 @@
+@import "mixins";
+
+$vapor_wave_violet: #7400b8;
+$vapor_wave_purple: #5e60ce;
+$vapor_wave_pink: #FF71CE;
+$vapor_wave_turqouise: #56cfe1;
+$vapor_wave_cyan: #80ffdb;
+
+$matrix_lightGreen: #00FF41;
+$matrix_green: #008F11;
+
+.landingCodeWrapper {
+    canvas {display: block;}
+}
+
+.landingWrapper {
+    height: 60vh;
+    width: 100%;
+    
+    object-fit: cover;
+    background-image: url("/static/assets/images/matrix_bg.jpg");
+
+    @include phone-screen {
+        height: 60vh;
+    }
+
+    .layerWrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            z-index: 500;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: Roboto;
+            font-size: 6rem;
+            font-weight: 800;
+            color: white;
+
+            @include phone-screen {
+                font-size: 2rem;
+            }
+
+            @include tablet-screen {
+                font-size: 4rem;
+            }
+        }
+
+        .subtitle {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            z-index: 500;
+
+            position: absolute;
+            top: 65%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: Roboto;
+            font-size: 4rem;
+            font-weight: 100;
+            color: white;
+
+            @include phone-screen {
+                font-size: 2rem;
+            }
+
+            @include tablet-screen {
+                font-size: 4rem;
+            }
+        }
+
+        .learnMore {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: 'Roboto', monospace;
+            color: white;
+            background-image: linear-gradient( 140deg , $matrix_lightGreen 0%, $matrix_green 50%);
+            font-size: 1.2rem;
+            outline: none;
+            border: 0;
+            border-radius: 12px;
+            width: 200px;
+            height: 42px;
+            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+            
+
+            @include phone-screen {
+                font-size: 1.2rem;
+                height: 36px;
+                width: 160px;
+            }
+
+            @include tablet-screen {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.aboutWrapper {
+    background-color: black;
+
+    .linkWrapper {
+        border-top: 4px solid white;
+        background-color: $matrix_green;
+
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include phone-screen {
+            height: 60px;
+        }
+
+        img {
+            height: 48px;
+            width: 48px;
+
+            @include phone-screen {
+                height: 32px;
+                width: 32px;
+            }
+        }
+    }
+    
+
+    .description {
+        color: white;
+        margin: 0 10%;
+        font-family: 'Roboto', monospace;
+        font-weight: 600;
+
+        @include laptop-screen {
+            margin: 0 12.5%;
+        } 
+        
+        @include desktop-screen {
+            margin: 0 15%;
+        }
+        
+        @include xl-desktop-screen {
+            margin: 0 20%;
+        }
+
+        .title {
+            font-size: 2.5rem;
+
+            @include phone-screen {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 800;
+
+            @include phone-screen {
+                font-size: 1.2rem;
+            }
+
+            .matrix {
+                color: $matrix_lightGreen;
+                text-decoration: none;
+            }
+            
+            .swift {
+                color: orange !important;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .infoWrapper {
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10%;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        @include laptop-screen {
+            margin: 0 12.5%;
+        } 
+        
+        @include desktop-screen {
+            margin: 0 15%;
+        }
+        
+        @include xl-desktop-screen {
+            margin: 0 20%;
+        }
+
+        .infoContainer {
+            display: flex;
+            padding: 24px 0;
+            width: 100%;
+
+            align-items: center;
+            justify-content: center;
+
+            @include phone-screen {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            img {
+                width: 140px;
+                height: 140px;
+                filter: invert(1);
+
+                @include phone-screen {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+    
+            .infoTextContainer {
+                display: flex;
+                flex-direction: column;
+                padding: 0 10%;
+                color: white;
+
+                @include phone-screen {
+                    padding: 24px 10% 0 10%;
+                }
+    
+                .infoTitle {
+                    font-size: 2rem;
+                    font-family: 'Roboto';
+                    margin: 0;
+
+                    @include phone-screen {
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                }
+    
+                .infoSubtitle {
+                    font-size: 1.5rem;
+                    font-family: 'Roboto Mono', monospace;
+
+                    @include phone-screen {
+                        text-align: center;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

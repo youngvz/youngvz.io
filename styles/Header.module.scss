@@ -1,0 +1,199 @@
+@import "mixins";
+
+$vapor_wave_violet: #7400b8;
+$vapor_wave_purple: #5e60ce;
+$vapor_wave_pink: #FF71CE;
+$vapor_wave_turqouise: #56cfe1;
+$vapor_wave_cyan: #80ffdb;
+
+.audio {
+    position: fixed;
+    bottom:0;
+    margin: 8px;
+    width: calc(100% - 16px);
+    z-index: 99999;
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+
+    @include phone-screen {
+        top: 0;
+        width: calc(100% - 12px) !important;
+        margin: 6px;
+        bottom: unset !important;
+    }
+
+    &::-webkit-media-controls-enclosure {
+        // border-radius: 5px;
+        background-color: white;
+    }
+}
+
+.landingWrapper {
+    height: 50vh;
+    width: 100%;
+    
+    background-color: $vapor_wave_purple;
+    background-image: linear-gradient( 140deg , $vapor_wave_violet 0%, $vapor_wave_purple 25%, $vapor_wave_pink 60%, $vapor_wave_cyan 70%, $vapor_wave_turqouise 80%);
+
+    @include phone-screen {
+        height: 60vh;
+    }
+
+    .layerWrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            z-index: 500;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: Roboto;
+            font-size: 6rem;
+            font-weight: 800;
+            color: white;
+
+            @include phone-screen {
+                font-size: 2rem;
+            }
+
+            @include tablet-screen {
+                font-size: 4rem;
+            }
+        }
+
+
+        .roman {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 0.7;
+            height: inherit;
+
+            -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadein 3s; /* Firefox < 16 */
+            -ms-animation: fadein 3s; /* Internet Explorer */
+            -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+        }
+
+        .subtitle {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            z-index: 500;
+
+            position: absolute;
+            top: 65%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: Roboto;
+            font-size: 4rem;
+            font-weight: 100;
+            color: white;
+
+            @include phone-screen {
+                font-size: 2rem;
+            }
+
+            @include tablet-screen {
+                font-size: 4rem;
+            }
+        }
+
+        .learnMore {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-family: 'Roboto', monospace;
+            color: white;
+            background-image: linear-gradient( 140deg , $vapor_wave_violet 0%, $vapor_wave_purple 50%);
+            font-size: 1.2rem;
+            outline: none;
+            border: 0;
+            border-radius: 12px;
+            width: 200px;
+            height: 42px;
+            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+            
+
+            @include phone-screen {
+                font-size: 1.2rem;
+                height: 36px;
+                width: 160px;
+            }
+
+            @include tablet-screen {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.7; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.7; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.7; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.7; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.7; }
+}
+
+.sakuraBg {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url('../public/static/assets/icons/sakura-1-1.png'), url('../public/static/assets/icons/sakura-2.png');
+     animation: snow 20s linear infinite;
+ }
+ 
+ @keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+ }
