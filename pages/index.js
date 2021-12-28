@@ -3,6 +3,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Posts from '../components/Posts';
+import Head from 'next/head';
 
 import styles from '../styles/Home.module.scss'
  
