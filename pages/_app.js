@@ -14,6 +14,7 @@ export default function MyApp({ Component, pageProps }) {
 
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet"/>
 
       <meta name="title" content="youngvz"/>
       <meta name="description" content="Vaporwave inspired website."/>
@@ -23,14 +24,14 @@ export default function MyApp({ Component, pageProps }) {
       <meta property="og:url" content="https://youngvz.io/"/>
       <meta property="og:title" content="youngvz"/>
       <meta property="og:description" content="Vaporwave inspired website."/>
-      <meta property="og:image" content="https://s3.amazonaws.com/www.youngvz.io/assets/images/link_preview.png"/>
+      <meta property="og:image" content="https://youngvz.io/static/assets/images/link_preview.png"/>
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image"/>
       <meta property="twitter:url" content="https://youngvz.io/"/>
       <meta property="twitter:title" content="youngvz"/>
       <meta property="twitter:description" content="Vaporwave inspired website."/>
-      <meta property="twitter:image" content="https://s3.amazonaws.com/www.youngvz.io/assets/images/link_preview.png"/>
+      <meta property="twitter:image" content="https://youngvz.io/static/assets/images/link_preview.png"/>
     </Head>
     <Component {...pageProps} />
     </>
